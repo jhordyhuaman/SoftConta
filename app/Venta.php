@@ -11,7 +11,7 @@ class Venta extends Model
     //relaciones
     public function documento_pago()
     {
-        return $this->belongsTo('SoftConta\DocumentoPago','id');
+        return $this->belongsTo('SoftConta\DocumentoPago','docpago_id');
     }
     public function detalle_ventas()
     {

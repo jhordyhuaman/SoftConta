@@ -1,0 +1,12 @@
+﻿.ui-draggable-dragging{
+   background: #ff0000;
+}
+body {
+    font-family: 'Segoe UI';
+}
+.input-tabla {
+    /*width: 80%;*/
+    height: 30px;
+    border: 1px solid #F4F4F4;
+    text-align:center;
+}

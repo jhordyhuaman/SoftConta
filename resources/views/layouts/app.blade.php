@@ -9,14 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>ContaSoft</title>
-    {!!Html::style('assets/vendors/fullcalendar/fullcalendar.css')!!}
-    {!!Html::style('assets/vendors/animate-css/animate.min.css')!!}
-    {!!Html::style('assets/vendors/sweet-alert/sweet-alert.min.css')!!}
-    {!!Html::style('assets/vendors/material-icons/material-design-iconic-font.min.css')!!}
-    {!!Html::style('assets/vendors/socicon/socicon.min.css')!!}
+    {!! Html::style('assets/estilo/Content/jquery.bootgrid.min.css') !!}
+    {!! Html::style('assets/estilo/Content/material-design-iconic-font.min.css') !!}
+    {!! Html::style('assets/estilo/Content/jquery-ui.min.css') !!}
+    {!! Html::style('assets/estilo/Content/sweet-alert.min.css') !!}
+    {!! Html::style('assets/estilo/Content/toastr.min.css') !!}
+    {!! Html::style('assets/estilo/Content/app.min.1.css') !!}
+    {!! Html::style('assets/estilo/Content/app.min.2.css') !!}
+    {!! Html::style('assets/estilo/Content/style.css') !!}
+    {!! Html::style('assets/estilo/Content/dataTables.css') !!}
+    {!! Html::style('assets/estilo/Content/css/font-awesome.min.css') !!}
+    {!! Html::style('assets/estilo/vendors/fullcalendar/fullcalendar.css') !!}
+    {!! Html::style('assets/estilo/vendors/animate-css/animate.min.css') !!}
+    {!! Html::style('assets/estilo/vendors/socicon/socicon.min.css') !!}
 
-    {!!Html::style('assets/css/app.min.1.css')!!}
-    {!!Html::style('assets/css/app.min.2.css')!!}
 </head>
 <body>
 <header id="header" class="bgm-bluegray">
@@ -513,30 +519,30 @@
         </div>
     </section>
     </section>
-    {!! Html::script('assets/js/jquery-2.1.1.min.js')!!}
-    {!! Html::script('assets/js/bootstrap.min.js')!!}
-    {!! Html::script('assets/vendors/flot/jquery.flot.min.js')!!}
-    {!! Html::script('assets/vendors/flot/jquery.flot.resize.min.js')!!}
-    {!! Html::script('assets/vendors/flot/plugins/curvedLines.js')!!}
-    {!! Html::script('assets/vendors/sparklines/jquery.sparkline.min.js')!!}
-    {!! Html::script('assets/vendors/easypiechart/jquery.easypiechart.min.js')!!}
-    {!! Html::script('assets/vendors/fullcalendar/lib/moment.min.js')!!}
-    {!! Html::script('assets/vendors/fullcalendar/fullcalendar.min.js')!!}
-    {!! Html::script('assets/vendors/simpleWeather/jquery.simpleWeather.min.js')!!}
-    {!! Html::script('assets/vendors/auto-size/jquery.autosize.min.js')!!}
-    {!! Html::script('assets/vendors/nicescroll/jquery.nicescroll.min.js')!!}
-    {!! Html::script('assets/vendors/waves/waves.min.js')!!}
-    {!! Html::script('assets/vendors/bootstrap-growl/bootstrap-growl.min.js')!!}
-    {!! Html::script('assets/vendors/sweet-alert/sweet-alert.min.js')!!}
-    {!! Html::script('assets/js/flot-charts/curved-line-chart.js')!!}
-    {!! Html::script('assets/js/flot-charts/line-chart.js')!!}
-    {!! Html::script('assets/js/charts.js')!!}
-    {!! Html::script('assets/js/functions.js')!!}
-    {!! Html::script('assets/vendors/bootgrid/jquery.bootgrid.min.js')!!}
-    {!! Html::script('assets/js/demo.js')!!}
+
+
+{!! Html::script('assets/estilo/Scripts/jquery-2.1.1.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/bootstrap.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/functions.js') !!}
+{!! Html::script('assets/estilo/Scripts/waves.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/jquery.nicescroll.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/jquery-ui.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/sweet-alert.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/toastr.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/bootstrap-select.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/moment.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/datetimepicker.min.js') !!}
+{!! Html::script('assets/estilo/Scripts/dataTables/jquery.dataTables.js') !!}
+{!! Html::script('assets/estilo/Scripts/dataTables/dataTables.bootstrap.js') !!}
+{!! Html::script('assets/estilo/vendors/fullcalendar/lib/moment.min.js') !!}
+{!! Html::script('assets/estilo/vendors/fullcalendar/fullcalendar.min.js') !!}
+{!! Html::script('assets/estilo/vendors/simpleWeather/jquery.simpleWeather.min.js') !!}
 
 {!! Html::script('funciones/getTipoTab.js')!!}
 {!! Html::script('funciones/proveedor.js')!!}
+
+
+@yield('footer')
     </body>
 </html>
  @endif

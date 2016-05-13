@@ -13,8 +13,6 @@
             </div>
             <div class="modal-body">
 
-
-
                     <select name="tipotabla_id" id="tabladatos">
                         <option>Tipo de documento</option>
                         <option value="11">Factura</option>
@@ -134,6 +132,13 @@
                 </div>
             </div>
 
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
             <br/><br/><br/>
         </div>
     </div>

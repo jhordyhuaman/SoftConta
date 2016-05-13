@@ -17,6 +17,7 @@ Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback
 
 Route::get('buscar/proveedor/{b}','ProveedorController@Buscar');
 Route::get('/', 'HomeController@index');
+Route::get('listventa/', 'VentaController@ventas');
 
 Route::get('tipotabla/{id}','TipoTablaController@TipoTabla');
 

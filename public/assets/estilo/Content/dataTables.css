@@ -1,0 +1,101 @@
+﻿.table>thead:first-child>tr:first-child>th{
+    border-top:0;
+    background-color:#60BB46;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+    padding: 5px;
+}
+
+/*Para la paginación de datatables*/
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th,
+ .table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+   white-space: nowrap;  
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 0px solid #f0f0f0;
+    font-size: 11px;
+}
+
+.table-condensed > thead > tr > th, 
+.table-condensed > tbody > tr > th, 
+.table-condensed > tfoot > tr > th, 
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td, 
+.table-condensed > tfoot > tr > td {
+    padding: 3px;
+}
+
+.table > thead > tr > th:last-child, .table > tbody > tr > th:last-child, .table > tfoot > tr > th:last-child, .table > thead > tr > td:last-child, .table > tbody > tr > td:last-child, .table > tfoot > tr > td:last-child {
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.table > tbody > tr:last-child > td, 
+.table > tfoot > tr:last-child > td {
+    padding-bottom: 5px;
+}
+
+.pagination > .active > a, .pagination > .active > span,
+ .pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+    background-color: #60BB46;
+}
+/*Buscador*/
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+}
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5em;
+    width: 180px;
+    border-style:solid;
+}
+
+.btn-float
+{
+    right:25px;
+}
+
+/*botones de las opciones*/
+.btn-icon {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+select.input-sm {
+    height: 15px;
+    line-height: 10px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: inherit;
+    font-size: 12.5px
+}
+
+.dataTables_length {
+    width: 40%;
+    float: left;
+}
+form label {
+    display: block;
+    padding: 0 0 10px;
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 8px 0;
+}
+
+.dataTables_info{
+    font-weight:bold;
+    padding-top: 8px
+}

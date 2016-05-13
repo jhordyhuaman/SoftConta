@@ -10,11 +10,11 @@ class DetalleVenta extends Model
 
     public function venta()
     {
-        return $this->belongsTo('SoftConta\Venta','id');
+        return $this->belongsTo('SoftConta\Venta','venta_id');
     }
 
     public function cliente()
     {
-        return $this->belongsTo('SoftConta\Cliente','id');
+        return $this->belongsTo('SoftConta\Cliente','cliente_id');
     }
 }

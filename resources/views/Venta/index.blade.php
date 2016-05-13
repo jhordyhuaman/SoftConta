@@ -96,7 +96,13 @@
 
     <div class="card">
         <div class="card-body card-padding">
-
+            <div style="z-index: 2;position: absolute;margin-left:50%; ">
+                <button class="btn bgm-teal btn-icon waves-effect waves-button waves-float" data-toggle="modal" href="#preventClick" style="width: 60px;height: 60px;"><i style="font-size:40px;" class="md md-add"></i></button>
+                <button class="btn bgm-cyan btn-icon waves-effect waves-button waves-float"><i class="md md-sync"></i></button>
+                <button class="btn bgm-lightblue btn-icon waves-effect waves-button waves-float"><i class="md md-get-app"></i></button>
+                <button class="btn btn-primary btn-icon waves-effect waves-button waves-float"><i class="md md-home"></i></button>
+                <button class="btn bgm-lime btn-icon waves-effect waves-button waves-float"><i class="md md-apps"></i></button>
+            </div>
             <div class="row">
                     <div role="tabpanel" class="tab">
                         <ul class="tab-nav" role="tablist" tabindex="3" style="overflow: hidden; outline: none;">
@@ -111,39 +117,17 @@
                         <div class="tab-content">
 
                             <div role="tabpanel" class="tab-pane animated fadeInRight active" id="home9">
-                                <div style="z-index: 2;position: absolute;margin-left:50%; ">
-                                    <button class="btn bgm-teal btn-icon waves-effect waves-button waves-float" data-toggle="modal" href="#preventClick" style="width: 60px;height: 60px;"><i style="font-size:40px;" class="md md-add"></i></button>
-                                    <button class="btn bgm-cyan btn-icon waves-effect waves-button waves-float"><i class="md md-sync"></i></button>
-                                    <button class="btn bgm-lightblue btn-icon waves-effect waves-button waves-float"><i class="md md-get-app"></i></button>
-                                    <button class="btn btn-primary btn-icon waves-effect waves-button waves-float"><i class="md md-home"></i></button>
-                                    <button class="btn bgm-lime btn-icon waves-effect waves-button waves-float"><i class="md md-apps"></i></button>
-                                </div>
-                                <table id="data-table-command" class="table table-striped table-vmiddle">
+
+                                <table id="listventas" class="table table-striped table-condensed">
                                     <thead>
                                     <tr>
-                                        <th data-column-id="id" data-type="numeric">ID</th>
-                                        <th data-column-id="sender">Sender</th>
-                                        <th data-column-id="received" data-order="desc">Received</th>
-                                        <th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
+                                        <th>ID</th>
+                                        <th>Sender</th>
+                                        <th>Received</th>
+                                        <th>Commands</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>10238</td>
-                                        <td>eduardo@pingpong.com</td>
-                                        <td>14.10.2013</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10243</td>
-                                        <td>eduardo@pingpong.com</td>
-                                        <td>19.10.2013</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10248</td>
-                                        <td>eduardo@pingpong.com</td>
-                                        <td>24.10.2013</td>
-                                    </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -169,9 +153,23 @@
             </div>
 
             <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
         </div>
     </div>
 
+@stop
 
+@section('footer')
+
+{!! Html::script('funciones/datalist.js')!!}
 
 @stop

@@ -19,6 +19,6 @@ class Cliente extends Model
     }
     public function tipo_tabla()
     {
-        return $this->belongsTo('SoftConta\TipoTabla','id');
+        return $this->belongsTo('SoftConta\TipoTabla','tipotabla_id');
     }
 }
