@@ -114,7 +114,7 @@ class AuthController extends Controller
         if ($authUser){
             return $authUser;
         }
-          var_dump($facebookUser);
+         
         return User::create([
             'name' => $facebookUser->name,
             'email' => $facebookUser->email,

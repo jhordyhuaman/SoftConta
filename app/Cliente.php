@@ -6,19 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     protected $table = "clientes";
-    protected $fillable =['name','apellido','n_doc','razonsocial','direccion','telefono1','telefono2','estado','tipotabla_id'];
+    protected $primaryKey = "id_cliente";
+    protected $fillable =['name','apellido','n_doc','razonsocial','direccion','telefono1','telefono2','estado','tipodoc_id'];
     public $timestamps = false;
 
     public function detalle_ventas()
-    {
-        return $this->hasMany('SoftConta\DetalleVenta','id');
-    }
-    public function documento_pago()
-    {
-        return $this->belongsTo('SoftConta\DocumentoPago','id');
-    }
+    {return $this->hasMany('SoftConta\DetalleVenta','id_detalle_venta');}
+
+    
     public function tipo_tabla()
-    {
-        return $this->belongsTo('SoftConta\TipoTabla','tipotabla_id');
-    }
+    {return $this->belongsTo('SoftConta\TipoTabla','tipodoc_id');}
 }

@@ -7,7 +7,14 @@ class DocumentoPago extends Model
 {
     protected $table = "documento_pagos";
     public $timestamps = false;
-    protected $fillable = ['serie_codigo','año_emision','tipotabla_id','num_cpago','fecha_emi','fecha_ven'];
+    protected $primaryKey="id_documento_pago";
+    protected $fillable = ['serie_codigo',
+                            'año_emision',
+                            'tipo_pago',// para ver si es pago es de conpra o venta (c:compra / v: venta)
+                            'tipotabla_id',
+                            'num_cpago',
+                            'fecha_emi',
+                            'fecha_ven'];
 
     public function tipo_tabla(){
         return $this->belongsTo('SoftConta\TipoTabla','tipotabla_id');
