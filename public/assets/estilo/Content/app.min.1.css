@@ -13964,11 +13964,11 @@ input:focus {
 }
 
 .table > thead > tr > th {
-  background-color: #fff;
-  vertical-align: middle;
-  font-weight: 500;
-  color: #333;
-  border-width: 1px;
+  background-color: #fff !important;
+  vertical-align: middle !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  border-width: 1px !important;
 }
 
 .table [class*="bg-"] > tr > th {

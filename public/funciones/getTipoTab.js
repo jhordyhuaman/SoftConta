@@ -7,14 +7,14 @@ getTipoTabla('2','#tipodoc');
                 rv[i] = arr[i];
             }
             $.each(rv,function(i,data){
-                var html = '<option value="'+data.id+'">('+data.numero+') '+data.descripcion+'</option>';
+                var html = '<option value="'+data.id_tipo_tabla+'">('+data.numero+') '+data.descripcion+'</option>';
                 $(idhtml).append(html);
             });
         });
 
     }
 
-$("input[type='radio'].btnchec").click(function () {
+$(document).on('click',"input[type='radio'].btnchec",function () {
     var opt = $("input[type='radio'].btnchec:checked").val(); 
     if(opt == 1){
         $('.pnatural').show(200);
@@ -26,19 +26,3 @@ $("input[type='radio'].btnchec").click(function () {
 
 });
 
-$("#data-table-command").bootgrid({
-    css: {
-        icon: 'md icon',
-        iconColumns: 'md-view-module',
-        iconDown: 'md-expand-more',
-        iconRefresh: 'md-refresh',
-        iconUp: 'md-expand-less'
-    },
-    formatters: {
-        "commands": function(column, row) {
-            return "<button type=\"button\" class=\"btn btn-icon command-edit\" data-row-id=\"" + row.id + "\"><span class=\"md md-edit\"></span></button> " +
-                "<button type=\"button\" class=\"btn btn-icon command-delete\" data-row-id=\"" + row.id + "\"><span class=\"md md-delete\"></span></button>";
-        }
-    }
-
-});

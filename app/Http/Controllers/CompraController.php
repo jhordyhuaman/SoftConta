@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use SoftConta\Compra, SoftConta\DetalleCompra, SoftConta\Proveedor;
 use SoftConta\DocumentoPago;
 use SoftConta\Http\Requests;
+use SoftConta\Inventario;
+use SoftConta\Precio;
+use SoftConta\Producto;
 
 class CompraController extends Controller
 {
@@ -38,20 +41,24 @@ class CompraController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
-        // insertamos en la tabla documentos
+        Precio::create($request->all());
+        $p = Precio::groupBy('id_precio')->orderBy('id_precio','asc')->get()->last();
+        Inventario::create($request->all());
+        $i = Inventario::groupBy('id_inventario')->orderBy('id_inventario','asc')->get()->last();
+        $request->merge(['id_precio'=>$p->id_precio,'id_inventario'=>$i->id_inventario]);
+        Producto::create($request->all());
+        $pr = Producto::groupBy('id_producto')->orderBy('id_producto','asc')->get()->last();
         DocumentoPago::create($request->all());
-        // sacamos el id
-        $dc = DocumentoPago::groupBy('id')->orderBy('id', 'asc')->get()->last();
-        // añadimos al request
-        $request->merge(['docpago_id' => $dc->id]);
-        // insertamos en compras
+        $dc = DocumentoPago::groupBy('id_documento_pago')->orderBy('id_documento_pago', 'asc')->get()->last();
+        echo json_encode($pr->id_producto);
+        $request->merge(['docpago_id' => $dc->id_documento_pago,'id_producto'=>$pr->id_producto]);
+        echo json_encode($request->all());
         Compra::create($request->all());
-        $com = Compra::groupBy('id')->orderBy('id', 'asc')->get()->last();
+        $com = Compra::groupBy('id_compra')->orderBy('id_compra', 'asc')->get()->last();
         Proveedor::create($request->all());
-        $prov = Proveedor::groupBy('id')->orderBy('id', 'asc')->get()->last();
-        DetalleCompra::create(['proveedor_id' => $prov->id,
-            'compra_id' => $com->id,]);
+        $prov = Proveedor::groupBy('id_proveedor')->orderBy('id_proveedor', 'asc')->get()->last();
+        DetalleCompra::create(['proveedor_id' => $prov->id_proveedor,
+            'compra_id' => $com->id_compra,]);
 
         return redirect('Compra');  //*/
 

@@ -7,7 +7,17 @@ class Cliente extends Model
 {
     protected $table = "clientes";
     protected $primaryKey = "id_cliente";
-    protected $fillable =['name','apellido','n_doc','razonsocial','direccion','telefono1','telefono2','estado','tipodoc_id'];
+    protected $fillable =[
+        'name',
+        'apellido',
+        'n_doc',
+        'razonsocial',
+        'direccion',
+        'telefono1',
+        'telefono2',
+        'estado',
+        'tipodoc_id'
+    ];
     public $timestamps = false;
 
     public function detalle_ventas()

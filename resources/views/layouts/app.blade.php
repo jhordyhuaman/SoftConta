@@ -22,6 +22,7 @@
     {!! Html::style('assets/estilo/vendors/fullcalendar/fullcalendar.css') !!}
     {!! Html::style('assets/estilo/vendors/animate-css/animate.min.css') !!}
     {!! Html::style('assets/estilo/vendors/socicon/socicon.min.css') !!}
+    {!! Html::style('assets/css/JQuerySteps.css') !!}
 
 </head>
 <body>
@@ -511,9 +512,6 @@
     <section id="content">
         <div class="container">
 
-
-
-
                 @yield('content')
 
         </div>
@@ -537,6 +535,9 @@
 {!! Html::script('assets/estilo/vendors/fullcalendar/lib/moment.min.js') !!}
 {!! Html::script('assets/estilo/vendors/fullcalendar/fullcalendar.min.js') !!}
 {!! Html::script('assets/estilo/vendors/simpleWeather/jquery.simpleWeather.min.js') !!}
+{!! Html::script('assets/js/jquery.steps.min.js') !!}
+{!! Html::script('assets/js/jquery.validate.min.js') !!}
+{!! Html::script('funciones/Tools.js')!!}
 
 {!! Html::script('funciones/getTipoTab.js')!!}
 {!! Html::script('funciones/proveedor.js')!!}

@@ -51,7 +51,7 @@
                         <span class="input-group-addon"><i class="md md-credit-card"></i></span>
                         <div class="col-sm-4">
                             <div class="fg-line select">
-                                <select name="tipotabla_id" id="tipodoc" class="form-control">
+                                <select name="tipodoc_id" id="tipodoc" class="form-control">
                                     <option>Tipo Doc</option>
                                 </select>
                             </div>

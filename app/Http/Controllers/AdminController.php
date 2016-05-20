@@ -4,13 +4,9 @@ namespace SoftConta\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use SoftConta\Cliente;
-use SoftConta\Compra;
-use SoftConta\DetalleVenta;
 use SoftConta\Http\Requests;
-use SoftConta\Venta;
 
-class VentaController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +15,7 @@ class VentaController extends Controller
      */
     public function index()
     {
-        return view('Venta.index');
+        return view('Producto.index');
     }
 
     /**
@@ -40,9 +36,7 @@ class VentaController extends Controller
      */
     public function store(Request $request)
     {
-        //return $request->all();
-       Cliente::create($request->all());
-        return redirect('Venta');
+        //
     }
 
     /**
@@ -88,21 +82,5 @@ class VentaController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function ventas(Request $request)
-    {
-
-        if($request->ajax()){
-           $dventa = DetalleVenta::all();
-        foreach ($dventa as $detv){
-             $detv->cliente;
-             $detv->venta;
-             $detv->cliente->tipo_tabla;
-             $detv->venta->documento_pago;
-             $detv->venta->documento_pago->tipo_tabla;
-          }
-         }
-        return response()->json($dventa);
     }
 }

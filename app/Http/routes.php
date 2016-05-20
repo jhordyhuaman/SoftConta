@@ -25,5 +25,6 @@ Route::group(['middleware' => 'web'], function() {
     Route::auth();
     Route::resource('Compra','CompraController');
     Route::resource('Venta','VentaController');
+    Route::resource('Admin','AdminController');
 
 });
